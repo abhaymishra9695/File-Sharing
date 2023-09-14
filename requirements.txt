@@ -1,7 +1,9 @@
 asgiref==3.7.2
 Django==3.2
 djangorestframework==3.14.0
+engineering-notation==0.9.0
 numpy==1.25.2
 psycopg2-binary==2.9.7
 pytz==2023.3.post1
 sqlparse==0.4.4
+tk-tools==0.16.0
