@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-7mrmmq#aw(z4@@ux9@!z^@2n&#!_&*&npnmrse5$i9!@d6r_3y
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app','now.sh','127.0.0.1','localhost']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -78,15 +78,10 @@ WSGI_APPLICATION = 'fileupload.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'railway',
-        'USER': 'postgres',
-        'PASSWORD': 'beICGEKprY5y9flzDJJA',
-        'HOST': 'containers-us-west-81.railway.app',
-        'PORT': '5542',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -135,13 +130,13 @@ STATIC_URL = '/static/'
 
 
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
-STATICFILES_DIR = {
-    os.path.join(BASE_DIR , "public/static")
-}
-# STATIC_ROOT = 'staticfiles'
-# STATIC_URL = '/static/'
-# STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+# STATICFILES_DIR = {
+#     os.path.join(BASE_DIR , "public/static")
+# }
+STATIC_ROOT = 'staticfiles'
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 
 
 
